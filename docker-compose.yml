@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  contact:
+    build: .
+    image: circlecisample:0.9
+    container_name: circlecisample
+    tty: true
+    ports:
+      - "5000:5000"
+    volumes:
+      - yarn-cache:/Users/daichi/Library/Caches/Yarn/v4
+
+volumes:
+  yarn-cache:
